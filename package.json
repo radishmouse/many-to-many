@@ -1,0 +1,18 @@
+{
+  "name": "many-to-many",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db:delete": "dropdb bookstore",
+    "db:create": "createdb bookstore",
+    "db:schema": "psql -f schema.sql bookstore",
+    "db:seed": "psql -f seed.sql bookstore",
+    "db:reset": "npm run db:delete; npm run db:create && npm run db:schema && npm run db:seed",
+    "db:shell": "psql bookstore",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
