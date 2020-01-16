@@ -43,8 +43,14 @@ from sales s
         on s.book_id = b.id;
 
 
--- How to write a join:
+-- How to write a join for two tables:
 -- 1. write down the name of the two tables you want to join into a single "temporary" table
 -- 2. give them aliases (not required, but common practice)
 -- 3. specify how they're linked
--- 4. write the select part, using the aliases as column prefixes
+-- 4. select the column names, using the table aliases
+
+-- To add a third table to the join:
+-- 5. write down the name of the third table
+-- 6. give it an alias
+-- 7. specify how it's linked to either of the first two tables
+-- 8. add columns from the third table to the select
