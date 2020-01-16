@@ -4,6 +4,11 @@ select title
 from books
     where id in (select book_id from sales);
 
+-- You can filter inside of the subquery, such as to find books sold this year
+select title
+from books
+    where id in (select book_id from sales where purchase_date > '2019-12-31');
+
 -- Use a subquery to get the title of books that have not been purchased
 select title
 from books
